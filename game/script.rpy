@@ -70,6 +70,7 @@ label ignore_fish:
     jump fish_talk
 
 label fish_talk:
+    play music "1.043 - Temmie Village.flac" fadein 3.0 volume 0.5
     $ povname = renpy.input("What is your name?", length=50)
     $ povname = povname.strip()
 
@@ -148,6 +149,7 @@ label task_details:
     "You look at the timetable and see that the owner is Brick, your classmate"
     "You remember that Brick seems to be a huge introvert and is in your art class and game club."
     "Wait, how are you holding the paper if you are holding the fish?"
+    stop music fadeout 3.0
     "You look down and see that the fish is gone..."
     "How did it even give you the paper?"
     "You feel like you are losing your mind, but you decide to just go home and start planning how to become Brick's friend tomorrow."
