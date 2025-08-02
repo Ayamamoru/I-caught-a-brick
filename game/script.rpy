@@ -3,8 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Fish")
-define pov = Character("[povname]")
+define f = Character("Fish", color="#049bff")
+define mc = Character("[povname]", color="#00e1ff")
+define b = Character("Brick", color="#ff7f44")
 
 
 label start:
@@ -23,7 +24,7 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    f "You've created a new Ren'Py game."
 
     $ povname = renpy.input("What is your name?", length=20)
     $ povname = povname.strip()
@@ -32,6 +33,9 @@ label start:
     if not povname:
         $ povname = "Morter"
     
-    pov "Hello, Fish. I am [povname]."
+    mc "Hello, Fish. I am [povname]."
+    
+    b "I am Brick, the best friend of Fish."
+    b "also you frickin suck at this game, Morter."
     
     return
