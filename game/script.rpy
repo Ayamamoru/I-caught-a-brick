@@ -11,7 +11,8 @@ define good_points = 0
 define neutral_points = 0
 transform halfsize():
     zoom 0.9
-
+image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
+   
 label start:
 
     # So uhm yeah, this is a game.
@@ -71,6 +72,9 @@ label ignore_fish:
 
 label fish_talk:
     play music "1.043 - Temmie Village.flac" fadein 3.0 volume 0.5
+
+    show top_text "Temmie Village - Undertale OST, by Toby Fox"
+
     $ povname = renpy.input("What is your name?", length=50)
     $ povname = povname.strip()
 
@@ -150,6 +154,7 @@ label task_details:
     "You remember that Brick seems to be a huge introvert and is in your art class and game club."
     "Wait, how are you holding the paper if you are holding the fish?"
     stop music fadeout 3.0
+    hide top_text
     "You look down and see that the fish is gone..."
     "How did it even give you the paper?"
     "You feel like you are losing your mind, but you decide to just go home and start planning how to become Brick's friend tomorrow."
