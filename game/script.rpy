@@ -3,10 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define e = Character("Fish")
+define pov = Character("[povname]")
 
-
-# The game starts here.
 
 label start:
 
@@ -26,8 +25,13 @@ label start:
 
     e "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    $ povname = renpy.input("What is your name?", length=20)
+    $ povname = povname.strip()
 
-    # This ends the game.
 
+    if not povname:
+        $ povname = "Morter"
+    
+    pov "Hello, Fish. I am [povname]."
+    
     return
