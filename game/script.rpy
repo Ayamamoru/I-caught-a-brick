@@ -25,13 +25,43 @@ label start:
 
     scene bg room
 
-    # Remember to define all the characters and sprites before using them. THANKS FUTURE MO
+    # Remember to define all the characters and sprites before using them... cause renpy will get angry if no. THANKS FUTURE MO
 
     show eileen happy
 
+    "You're walking down the street on your way back home from school."
+    
+    f "flop flop flop"
 
-    f "You've created a new Ren'Py game."
+    "Huh? What was that sound? You look around..."
+    "And see a fish flopping around on the ground."
 
+    f "*fish sounds*"
+
+    "You look around, but there is no water in sight... besides the sewer grate. Ew."
+    "Well, it looks slimy... but you can't just leave it there..."
+
+    menu option_1:
+      "Ignore the fish and keep walking":
+         $ bad_points += 1
+         jump ignore_fish
+      "Pick up the fish":
+         $ good_points += 1
+         jump help_fish
+
+label help_fish:
+    "You pick up the fish and..."
+    "Well, you didn't really think that far"
+    "You hold the fish in your hands utterly confused and helpless."
+    jump fish_talk
+
+label ignore_fish:
+    "You decide to ignore the fish and keep walking."
+    f "HEY YOU"
+    "The fish... yells at you?!?!?!?"
+    jump fish_talk
+
+label fish_talk:
     $ povname = renpy.input("What is your name?", length=50)
     $ povname = povname.strip()
 
