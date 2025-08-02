@@ -21,6 +21,7 @@ label start:
     $ good_points = 0
     $ neutral_points = 0
     image passive = "passive.png"
+    image bg room = "BG PLACEHOLDER.jpg"
 
     scene bg room
 
