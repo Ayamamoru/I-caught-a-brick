@@ -117,8 +117,21 @@ label fish_talk:
       "Decline the fish's request":
          $ bad_points += 1
          jump no_500_fish
+      "Try throwing the fish back on the ground":
+         $ neutral_points += 1 
+         jump slam_fish
+
+label slam_fish:
+    stop music fadeout 1
+    "You decide to throw the fish back on the ground."
+    play sound "Vine boom.mp3" volume 0.5
+    "It doesn't seem to work, for some reason, your hands are still holding the fish."
+    "Maybe the fish is magic... i mean, it can talk so unless you are hallucinating, it must be magic."
+    "You decide to try accepting the fish's request - anything to get it off your hands faster... its slimy and gross."
+    jump accept_request
 
 label accept_request:
+    play music "1.043 - Temmie Village.flac" fadein 3.0 volume 0.5
     "You decide to accept the fish's request."
     mc "let me see the monet first."
     f "I will give you the money once you complete the task."
@@ -162,7 +175,20 @@ label task_details:
     "You feel like you are losing your mind, but you decide to just go home and start planning how to become Brick's friend tomorrow."
 
     "The next morning at school..."
+    "You get to school 15 minutes before classes start"
+    mc " I don't really want to go to class yet, maybe the game club is open?"
 
+    menu option_3:
+      "Go to the game club":
+         $ good_points += 1
+         jump accept_request
+      "Go to class":
+         $ bad_points += 1
+         jump no_500_fish
+      "Play games on your phone" if neutral_points > 0:
+         $ neutral_points += 1
+         jump no_500_fish
+    
     
     show passive at right
 
