@@ -160,6 +160,9 @@ label task_details:
     "How did it even give you the paper?"
     "You feel like you are losing your mind, but you decide to just go home and start planning how to become Brick's friend tomorrow."
 
+    "The next morning at school..."
+
+    
     show passive at right
 
     b "I am Brick, the best friend of Fish."
