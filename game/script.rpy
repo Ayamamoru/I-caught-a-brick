@@ -9,6 +9,7 @@ define b = Character("Brick", color="#ff7f44")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
+define romance_points = 0
 transform halfsize():
     zoom 0.9
 image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
@@ -181,15 +182,36 @@ label task_details:
     menu option_3:
       "Go to the game club":
          $ good_points += 1
-         jump accept_request
+         jump morning_game_club
       "Go to class":
          $ bad_points += 1
-         jump no_500_fish
+         jump ignore_game_club
       "Play games on your phone" if neutral_points > 0:
          $ neutral_points += 1
-         jump no_500_fish
+         jump ignore_play_games
     
-    
+label morning_game_club:
+    "You decide to go to the game club."
+    "There are a few people there, but you don't see Brick."
+    "The club president brought some board games and is playing with a few other members."
+    "OH... would you look at that!"
+    mc "KITTTYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+    "You see the club president's cat sitting on a desk, pet carrier on the floor."
+
+label ignore_game_club:
+    "You decide to be a good student and head to class early."
+    "The classroom is about half full, and you see Brick sitting in the back of the class."
+    "You decide to sit next to him for now."
+    "But you're suddenly reminded that you are also..."
+    "AN INTROVERT."
+    "You feel like you should talk to him, but you also feel like you should just sit quietly and not bother him."
+
+label ignore_play_games:
+    "You decide to settle in the school courtyard and play some games on your phone."
+    "You play some games for a while, but you feel like you should probably go to class soon." 
+    "What luck... it starts POURING RAIN... ON YOUR PHONE."
+    "You quickly put your phone away and run to the school building."
+    "You're pretty soaked, but your phone seems alright."
     show passive at right
 
     b "I am Brick, the best friend of Fish."
