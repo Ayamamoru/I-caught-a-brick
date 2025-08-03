@@ -149,6 +149,7 @@ label task_details:
     f "the task is simple. I need you to get my owner out of the house and become his friend."
     f "I will give you his time table so go become his school friend."
     f "goodbye, twerp"
+    hide eileen happy
     "The fish gives you a piece of paper with a timetable on it."
     "You look at the timetable and see that the owner is Brick, your classmate"
     "You remember that Brick seems to be a huge introvert and is in your art class and game club."
@@ -158,9 +159,6 @@ label task_details:
     "You look down and see that the fish is gone..."
     "How did it even give you the paper?"
     "You feel like you are losing your mind, but you decide to just go home and start planning how to become Brick's friend tomorrow."
-
-
-    hide eileen happy
 
     show passive at right
 
