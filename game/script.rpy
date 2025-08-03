@@ -163,7 +163,7 @@ label no_500_fish:
 label task_details:
     f "the task is simple. I need you to get my owner out of the house and become his friend."
     f "I will give you his time table so go become his school friend."
-    f "goodbye, twerp"
+    f "goodbye, twerp. See you in a week."
     hide fish
     "The fish gives you a piece of paper with a timetable on it."
     "You look at the timetable and see that the owner is Brick, your classmate"
@@ -198,6 +198,70 @@ label morning_game_club:
     mc "KITTTYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
     "You see the club president's cat sitting on a desk, pet carrier on the floor."
 
+    menu option_4:
+      "Pet the cat":
+         $ good_points += 1
+         jump pet_cat
+      "Don't pet the cat":
+         $ bad_points += 1
+         jump ignore_cat
+
+#These are sub-option for option 3's label of good points
+label pet_cat:
+    "You decide to pet the cat."
+    "The cat is very fluffy and purrs when you pet it."
+    "You no longer want to go to class at all and just want to pet the car"
+    "You idly chat with the club members and pet the cat for a while."
+    b "Hey kitty, here's your water."
+    show passive with moveinleft
+    "You turn around and see Brick, he has a collapsible water bowl in his hands."
+    "Looks like he went to the water fountain to fill it up."
+    b "..."
+    mc "..."
+    "You feel like you should say something, but you also feel like-"
+    "oh, you've both been distracted by the cat."
+    "You both reach a silent understanding that you both love cats and that you both want to pet the cat."
+    "Both of you pet the cat and you feel the urge to make small talk"
+    mc "So, you like cats?"
+    b "Yeah"
+    mc "I like cats too."
+    b "Do you have a cat?"
+    mc "No, I don't, I'm too broke to have a cat."
+    b "Oh. I have a fish so I can't get a cat."
+    mc "Oh, maybe one day we will both get cats."
+    b "Yeah."
+    "You both reach a mutual understanding and continue to pet the cat in a more comfortable silence."
+    "You feel like you made a lot of progress and both of you head to class together in silence."
+    jump class_morning
+
+
+
+label ignore_cat:
+    "You decide not to pet the cat."
+    "How can you resist the urge to pet the cat?"
+    "You must be a monster."
+    "You decide to join the club members and play some board games."
+    "You play some games for a while, but you feel like you should probably go to class soon."
+    "You look up while tidying up the game pieces and see Brick sitting in the corner of the room."
+    "He's playing with the cat and seems to be having a good time."
+    "You feel like you should make some small talk but the bell rings and you have no choice but to go to class."
+    jump class_morning
+
+# This is the end of the sub-option for option 3's label of good points
+# Here is the label for the class morning (So I don't mix it up)
+label class_morning:
+    "The teacher is already in the classroom and is setting up for the class."
+    "You decide to sit next to Brick, who is sitting in the back of the class."
+    "The class is a boring lecture, so you idley doodle in your sketchbook"
+    b "I like your drawing."
+    "You look up and see Brick peering at your doodles subtly"
+    mc "Oh, thanks."
+    "The class continues with Brick looking at your doodles and you doodling."
+
+
+
+
+
 label ignore_game_club:
     "You decide to be a good student and head to class early."
     "The classroom is about half full, and you see Brick sitting in the back of the class."
@@ -205,10 +269,14 @@ label ignore_game_club:
     "But you're suddenly reminded that you are also..."
     "AN INTROVERT."
     "You feel like you should talk to him, but you also feel like you should just sit quietly and not bother him."
+    "You spend too much time thinking about it, and the teacher comes in to start class."
+    "You have no choice but to sit quietly and wait until class ends"
 
 label ignore_play_games:
     "You decide to settle in the school courtyard and play some games on your phone."
-    "You play some games for a while, but you feel like you should probably go to class soon." 
+    "You play some games for a while, but you feel like you should probably go to class soon."
+    play music "32 - Run!.mp3" fadein 3.0 volume 0.5
+    show top_text "Run! - Undertale OST, by Toby Fox"
     "What luck... it starts POURING RAIN... ON YOUR PHONE."
     "You quickly put your phone away and run to the school building."
     "You're pretty soaked, but your phone seems alright."
