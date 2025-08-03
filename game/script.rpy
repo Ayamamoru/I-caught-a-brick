@@ -23,12 +23,13 @@ label start:
     $ neutral_points = 0
     image passive = "passive.png"
     image bg room = "BG PLACEHOLDER.jpg"
+    image fish = "fish.png"
 
     scene bg room
 
     # Remember to define all the characters and sprites before using them... cause renpy will get angry if no. THANKS FUTURE MO
 
-    show eileen happy
+    show fish at center
 
     "You're walking down the street on your way back home from school."
     
@@ -149,7 +150,7 @@ label task_details:
     f "the task is simple. I need you to get my owner out of the house and become his friend."
     f "I will give you his time table so go become his school friend."
     f "goodbye, twerp"
-    hide eileen happy
+    hide fish
     "The fish gives you a piece of paper with a timetable on it."
     "You look at the timetable and see that the owner is Brick, your classmate"
     "You remember that Brick seems to be a huge introvert and is in your art class and game club."
