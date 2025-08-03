@@ -27,3 +27,4 @@ TL;DR... I struggled with everything until I learned how to use it (thank you so
 
 Thanks a bunch for taking a look at my project!
 Made with <3 by Mo
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
