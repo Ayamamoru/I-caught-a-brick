@@ -4,7 +4,7 @@ In which you go on an adventure with an introvert and his fish (or a fish and hi
 Try your best to convince said introvert to go touch grass and socialize for a chance to scam the fish out of $500!!
 
 
-Made for the Athena Awards by HackClub.
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
 
 Questions from Athena slack...
 
@@ -27,4 +27,3 @@ TL;DR... I struggled with everything until I learned how to use it (thank you so
 
 Thanks a bunch for taking a look at my project!
 Made with <3 by Mo
-[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
