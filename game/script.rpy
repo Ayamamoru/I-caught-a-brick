@@ -358,6 +358,8 @@ label cult_club:
     "You walk to the club room and knock on the door."
     "The door opens and you see a group of people sitting in a circle, chanting something."
     "You shrug and slip inside, closing the door behind you."
+    play music "28 - Premonition.mp3" fadein 1.0 volume 0.5
+    show top_text "Premonition - Undertale OST, by Toby Fox"
     mc "Hi everyone."
     "The group stops chanting and looks at you. The club vice president Eriss greets you."
     e "Hey club president, we were just practicing our chant."
@@ -375,6 +377,8 @@ label cult_club:
     e "We could try to summon the fish spirit and ask it for guidance."
     mc "Sure, we can try that. Let's set up a ritual for next week's meeting."
     "You spend the rest of the meeting discussing the fish and its possible significance."
+    stop music fadeout 1.0
+    hide top_text
 
 
 
