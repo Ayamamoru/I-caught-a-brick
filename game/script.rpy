@@ -314,6 +314,7 @@ label ignore_game_club:
     "You feel like you should talk to him, but you also feel like you should just sit quietly and not bother him."
     "You spend too much time thinking about it, and the teacher comes in to start class."
     "You have no choice but to sit quietly and wait until class ends"
+    jump class_boring
 
 
 label class_boring:
@@ -394,12 +395,13 @@ menu option_6:
     "Ask Brick about his fish" if occult_end == True:
             $ bad_points += 1
             jump fish_chat
-    "Make small talk and get to know him" if occult_end == True:
+    "Make small talk and get to know him":
             $ good_points += 1
             jump convo_chat
 
 label fish_chat:
-    "You put aside your nerves and approach Brick, "
+    "You put aside your nerves and approach Brick"
+    mc "Hey Brick, do you have a fish?"
 
 
 
