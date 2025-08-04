@@ -275,11 +275,22 @@ label ignore_game_club:
 label ignore_play_games:
     "You decide to settle in the school courtyard and play some games on your phone."
     "You play some games for a while, but you feel like you should probably go to class soon."
-    play music "32 - Run!.mp3" fadein 3.0 volume 0.5
+    play music "32 - Run!.mp3" fadein 1.0 volume 0.5
     show top_text "Run! - Undertale OST, by Toby Fox"
     "What luck... it starts POURING RAIN... ON YOUR PHONE."
     "You quickly put your phone away and run to the school building."
-    "You're pretty soaked, but your phone seems alright."
+    "THE DOORS ARE LOCKED."
+    mc "HEYYYYYY OPEN THE DOOR"
+    "You knock furiously on the door, but it looks like nobody hears you"
+    "You see someone passing by to reach the water fountain and knock harder on the door."
+    "You catch their attention and they open the door for you."
+    mc "THANK YOU SO MUCH"
+    b "Oh- no problem."
+    "You're in such a hurry that you don't even notice who it is as you scurry off to the washroom to dry off."
+    "Meanwhile Brick shrugs and continues filling up the bowl he was holding with water."
+    "You dry off in the washroom and look at yourself in the mirror."
+    "You look like a wet rat, ew."
+    "You sigh and head to class, hoping that nobody will notice the water dripping off your hair."
     show passive at right
 
     b "I am Brick, the best friend of Fish."
