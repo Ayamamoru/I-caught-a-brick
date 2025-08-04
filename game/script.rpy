@@ -16,6 +16,7 @@ define bad_points = 0
 define good_points = 0
 define neutral_points = 0
 define romance_points = 0
+define occult_end = False
 transform halfsize():
     zoom 0.9
 image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
@@ -28,6 +29,8 @@ label start:
     $ bad_points = 0
     $ good_points = 0
     $ neutral_points = 0
+    $ romance_points = 0
+    $ occult_end = False
     image passive = "passive.png"
     image bg room = "BG PLACEHOLDER.jpg"
     image fish = "fish.png"
@@ -379,7 +382,28 @@ label cult_club:
     "You spend the rest of the meeting discussing the fish and its possible significance."
     stop music fadeout 1.0
     hide top_text
+    $ occult_end = True
 
+    "After the meeting, you feel like you made some progress with the occult club."
+
+
+    "There's some time before the next block of classes, so you decide to head to the game club to see if Brick is there."
+    "You find Brick sitting in the corner of the room, playing with the club president's cat."
+
+menu option_6:
+    "Ask Brick about his fish" if occult_end == True:
+            $ bad_points += 1
+            jump fish_chat
+    "Make small talk and get to know him" if occult_end == True:
+            $ good_points += 1
+            jump convo_chat
+
+label fish_chat:
+    "You put aside your nerves and approach Brick, "
+
+
+
+label convo_chat:
 
 
     show passive at right
