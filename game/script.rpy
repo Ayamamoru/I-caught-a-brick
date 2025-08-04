@@ -4,7 +4,7 @@
 # name of the character.
 
 define f = Character("Fish", color="#049bff")
-define mc = Character("[povname]", color="#00e1ff")
+define mc = Character("[povname]", color="#be6ae6")
 define b = Character("Brick", color="#ff7f44")
 define bad_points = 0
 define good_points = 0
@@ -123,16 +123,20 @@ label fish_talk:
          jump slam_fish
 
 label slam_fish:
+    hide top_text
     stop music fadeout 1
     "You decide to throw the fish back on the ground."
     play sound "Vine boom.mp3" volume 0.5
+    show top_text "Vine Boom"
     "It doesn't seem to work, for some reason, your hands are still holding the fish."
+    hide top_text
     "Maybe the fish is magic... i mean, it can talk so unless you are hallucinating, it must be magic."
     "You decide to try accepting the fish's request - anything to get it off your hands faster... its slimy and gross."
     jump accept_request
 
 label accept_request:
     play music "1.043 - Temmie Village.flac" fadein 3.0 volume 0.5
+    show top_text "Temmie Village - Undertale OST, by Toby Fox"
     "You decide to accept the fish's request."
     mc "let me see the monet first."
     f "I will give you the money once you complete the task."
@@ -213,7 +217,7 @@ label pet_cat:
     "You no longer want to go to class at all and just want to pet the car"
     "You idly chat with the club members and pet the cat for a while."
     b "Hey kitty, here's your water."
-    show passive with moveinleft
+    show passive at left,with moveinleft
     "You turn around and see Brick, he has a collapsible water bowl in his hands."
     "Looks like he went to the water fountain to fill it up."
     b "..."
@@ -230,6 +234,7 @@ label pet_cat:
     b "Oh. I have a fish so I can't get a cat."
     mc "Oh, maybe one day we will both get cats."
     b "Yeah."
+    hide passive with moveoutleft
     "You both reach a mutual understanding and continue to pet the cat in a more comfortable silence."
     "You feel like you made a lot of progress and both of you head to class together in silence."
     jump class_morning
@@ -259,7 +264,7 @@ label class_morning:
     "The class continues with Brick looking at your doodles and you doodling."
 
 
-
+# This is the label for ignoring the game club - LEads to a neutral point path
 
 
 label ignore_game_club:
@@ -285,6 +290,7 @@ label ignore_play_games:
     "You see someone passing by to reach the water fountain and knock harder on the door."
     "You catch their attention and they open the door for you."
     stop music fadeout 1.0
+    hide top_text
     mc "THANK YOU SO MUCH"
     b "Oh- no problem."
     "You're in such a hurry that you don't even notice who it is as you scurry off to the washroom to dry off."
