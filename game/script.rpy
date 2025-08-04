@@ -284,6 +284,7 @@ label ignore_play_games:
     "You knock furiously on the door, but it looks like nobody hears you"
     "You see someone passing by to reach the water fountain and knock harder on the door."
     "You catch their attention and they open the door for you."
+    stop music fadeout 1.0
     mc "THANK YOU SO MUCH"
     b "Oh- no problem."
     "You're in such a hurry that you don't even notice who it is as you scurry off to the washroom to dry off."
