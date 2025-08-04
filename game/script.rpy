@@ -6,6 +6,12 @@
 define f = Character("Fish", color="#049bff")
 define mc = Character("[povname]", color="#be6ae6")
 define b = Character("Brick", color="#ff7f44")
+define t = Character("Teacher", color="#ff0000")
+define cb = Character("Club President", color="#ff00ff")
+define n = Character("Noona", color="#2938ff")
+define m = Character("Mo", color="#b8fdb8")
+define e = Character("Eriss", color="#ffb8b8")
+define k = Character("Rock", color="#ffb8b8")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
@@ -261,21 +267,13 @@ label class_morning:
     b "I like your drawing."
     "You look up and see Brick peering at your doodles subtly"
     mc "Oh, thanks."
-    "The class continues with Brick looking at your doodles and you doodling."
+    "The class continues with Brick looking at your doodles while you keep doodling."
+    "It's a bit awkward, but it isn't too bad."
+    "Class ends and you both pack up your things."
+    "You wonder if the game club is open today or if you should head to the cafeteria for lunch."
+    jump option_5
 
 
-# This is the label for ignoring the game club - LEads to a neutral point path
-
-
-label ignore_game_club:
-    "You decide to be a good student and head to class early."
-    "The classroom is about half full, and you see Brick sitting in the back of the class."
-    "You decide to sit next to him for now."
-    "But you're suddenly reminded that you are also..."
-    "AN INTROVERT."
-    "You feel like you should talk to him, but you also feel like you should just sit quietly and not bother him."
-    "You spend too much time thinking about it, and the teacher comes in to start class."
-    "You have no choice but to sit quietly and wait until class ends"
 
 label ignore_play_games:
     "You decide to settle in the school courtyard and play some games on your phone."
@@ -298,6 +296,88 @@ label ignore_play_games:
     "You dry off in the washroom and look at yourself in the mirror."
     "You look like a wet rat, ew."
     "You sigh and head to class, hoping that nobody will notice the water dripping off your hair."
+    jump class_boring
+
+
+# This is the label for ignoring the game club - LEads to a neutral point path
+
+
+label ignore_game_club:
+    "You decide to be a good student and head to class early."
+    "The classroom is about half full, and you see Brick sitting in the back of the class."
+    "You decide to sit next to him for now."
+    "But you're suddenly reminded that you are also..."
+    "AN INTROVERT."
+    "You feel like you should talk to him, but you also feel like you should just sit quietly and not bother him."
+    "You spend too much time thinking about it, and the teacher comes in to start class."
+    "You have no choice but to sit quietly and wait until class ends"
+
+
+label class_boring:
+    "As your teacher drones on and on about the history of art, you feel your eyelids getting heavier."
+    "You try to pay attention, but the lecture is so boring that you can't help but doze off."
+    t "Please pay attention, class."
+    "Your head jerks up slightly as you realize that you were about to fall asleep."
+    "You look around and see that most of the class is also struggling to stay awake."
+    mc "Oh jeez this class is so boring....."
+    "You look over to the right, at Brick, who is also struggling to stay awake."
+    "You sigh and hide behind your textbook, dozing off again."
+    "You wake up to the sound of the bell ringing, signaling the end of class."
+    mc "*waking up sounds idk man*"
+    "You look around and see that most of the class is already packing up their things."
+    "You quickly pack up your things and head out of the classroom."
+    "You wonder if the game club is open today or if you should head to the cafeteria for lunch"
+
+menu option_5:
+    "Go check the game club":
+            $ good_points += 1
+            jump check_game_club
+    "Head to the cafeteria":
+            $ bad_points += 1
+            jump ignore_game_club_cafeteria
+    "Wander around the school":
+            $ neutral_points += 1
+            jump ignore_wander_around
+    "Go to ??? club" if bad_points >= 3:
+            $ bad_points += 1
+            jump cult_club
+
+
+label check_game_club:
+    "You decide to go check the game club."
+
+
+label ignore_game_club_cafeteria:
+    "You decide to head to the cafeteria for lunch."
+
+label ignore_wander_around:
+    "You decide to wander around the school for a bit."
+
+label cult_club:
+    "You decide to go to the ??? club."
+    "You walk to the club room and knock on the door."
+    "The door opens and you see a group of people sitting in a circle, chanting something."
+    "You shrug and slip inside, closing the door behind you."
+    mc "Hi everyone."
+    "The group stops chanting and looks at you. The club vice president Eriss greets you."
+    e "Hey club president, we were just practicing our chant."
+    mc "Sorry for interrupting, just figured we should get the meeting started."
+    e "Oh, no problem, we were just waiting for you."
+    "You sit down in the circle and look around at the other members."
+    mc "We have some new members today - Welcome to the occult club everyone!"
+    mc "I have an encounter to share with you all."
+    "You proceed to tell the club about your encounter with the fish."
+    e "Wow, that's really interesting."
+    e "I wonder if the fish is a sign from the gods."
+    mc "I don't know, but it was definitely a weird experience."
+    e "Maybe we should try to use the fish as a medium for our next ritual."
+    mc "That's not a bad idea."
+    e "We could try to summon the fish spirit and ask it for guidance."
+    mc "Sure, we can try that. Let's set up a ritual for next week's meeting."
+    "You spend the rest of the meeting discussing the fish and its possible significance."
+
+
+
     show passive at right
 
     b "I am Brick, the best friend of Fish."
