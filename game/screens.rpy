@@ -1160,8 +1160,14 @@ screen credits_screen():
 
         vbox:
 
-            text "Development Team"
+            text "The Team"
             text "Developer: Mo"
+            text "Artist: Mo"
+            text "Writer: Also Mo"
+
+            text "Music and SFX: Toby Fox (all music) and Kenney (KenNL on reddit) (all sfx)"
+
+
             
             text "Special Thanks"
             text "BRO PLEASE OWRK"
