@@ -22,7 +22,8 @@ transform halfsize():
 image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
    
 label start:
-
+    stop music fadeout 1.5
+    play sound "mixkit-gear-fast-lock-tap-2857.wav"
     # So uhm yeah, this is a game.
     #jk anyways this is the START OF GAME (reminder to self, please remember to define everything before using it or else debugging will be a pain)
    

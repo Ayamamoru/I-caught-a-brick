@@ -27,6 +27,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    activate_sound "mixkit-gear-fast-lock-tap-2857.wav"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -225,6 +226,7 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    activate_sound "glass_005.ogg"
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
@@ -292,8 +294,8 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xalign 0.5
+        yalign 0.8
 
         spacing gui.navigation_spacing
 
@@ -342,6 +344,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    xalign 0.5 
 
 
 ## Main Menu screen ############################################################
@@ -387,7 +390,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
