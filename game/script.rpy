@@ -145,7 +145,7 @@ label slam_fish:
     jump accept_request
 
 label accept_request:
-    play music "1.043 - Temmie Village.flac" fadein 3.0 volume 0.5
+    play music "1.043 - Temmie Village.flac" fadein 3.0 
     show top_text "Temmie Village - Undertale OST, by Toby Fox"
     "You decide to accept the fish's request."
     mc "let me see the monet first."

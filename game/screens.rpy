@@ -298,7 +298,7 @@ screen navigation():
 
         if renpy.get_screen("main_menu"):
             xalign 0.5
-            yalign 0.8
+            yalign 0.9
         else:
             xoffset 60
             yalign 0.5
@@ -1180,7 +1180,7 @@ screen credits_screen():
             # Right Column  
             vbox:
                 text "Special Thanks" color '#3854af'
-                text "Kaylee c - for offering music suggestions and being a fellow fish enthusiast\n" size 30
+                text "Kaylee Chau - for offering music suggestions and being a fellow fish enthusiast\n" size 30
                 text "Julie Marmet - for offering me a very mischevious cat png (That I have yet to use sadly)\n" size 30
                 text "My sister Moldy - for listening to my weird ideas during the planning phase\n" size 30
 
