@@ -1169,19 +1169,31 @@ screen credits_screen():
                 text "Artist: Mo" size 35
                 text "Writer: Also Mo" size 35
                 text "TLDR; This is a solo project!\n" size 35
-                text "Made with <3 by Mo AKA Selina Tung" size 12
+                
                 text "Content used" color '#3854af'
-                text "Music: All music used is accredited to Toby Fox" size 35
-                text "And subsequently Materia Music Publishing" size 25
-                text "SFX: All sfx used is accredited to Kenney (KenNL on reddit)" size 35
-                text "Fonts used are HVD Poster, Overmuch and VCR OSD MONO" size 30 color '#224bd4d2'
+                text "Music: All music used is accredited to Toby Fox" size 25
+                text "And subsequently Materia Music Publishing\n" size 20
+                text "SFX: All sfx used are accredited to Kenney (KenNL on reddit)\n" size 25
+                text "Fonts used are HVD Poster, Overmuch and VCR OSD MONO\n" size 20 color '#224bd4d2'
+
+                text "if anyone is wondering the main menu music is Thrash Machine from Undertale! (also by Toby Fox)" size 20
             # Right Column  
             vbox:
                 text "Special Thanks" color '#3854af'
                 text "Kaylee c - for offering music suggestions and being a fellow fish enthusiast\n" size 30
                 text "Julie Marmet - for offering me a very mischevious cat png (That I have yet to use sadly)\n" size 30
                 text "My sister Moldy - for listening to my weird ideas during the planning phase\n" size 30
-                text "I caught a brick by Selina Tung is marked CC0 1.0" size 30
+
+                text "Play Testers" color '#3854af'
+                text "None for now" size 30
+                text "But uhm there will be" size 30
+                text "soon" size 30
+                text "hopefully more than 3\n" size 30
+
+                text "Thank you for playing!" color '#237be0'
+                text "Made with {color=#ff5242}<3{/color} by Mo AKA Selina Tung\n" size 25
+                text "\n\n\n"
+                text "I caught a brick by Selina Tung is marked CC0 1.0" size 25 color '#3457f0b6'
 
 
 style credits_label is gui_label
