@@ -50,6 +50,12 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
+#I added this in myself. Future me - This is just the volume default.
+#To make it louder or quieter later, just reuse the function while playing another track
+
+define config.default_music_volume = 0.3
+define config.default_sfx_volume = 0.6
+define config.default_voice_volume = 0.6
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
@@ -64,7 +70,6 @@ define config.has_voice = True
 
 define config.main_menu_music = "Thrash Machine.mp3"
 
-
 ## Transitions #################################################################
 ##
 ## These variables set transitions that are used when certain events occur.
@@ -73,8 +78,8 @@ define config.main_menu_music = "Thrash Machine.mp3"
 
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = fade
+define config.exit_transition = fade
 
 
 ## Between screens of the game menu.
@@ -84,7 +89,7 @@ define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = pixellate
 
 
 ## Used when entering the main menu after the game has ended.

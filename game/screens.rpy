@@ -28,6 +28,7 @@ style gui_text:
 style button:
     properties gui.button_properties("button")
     activate_sound "mixkit-gear-fast-lock-tap-2857.wav"
+    hover_sound "glass_004.ogg"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -227,6 +228,7 @@ style choice_vbox:
 style choice_button is default:
     properties gui.button_properties("choice_button")
     activate_sound "glass_005.ogg"
+    hover_sound "drop_003.ogg"
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
@@ -294,8 +296,12 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xalign 0.5
-        yalign 0.8
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+            yalign 0.8
+        else:
+            xoffset 60
+            yalign 0.5
 
         spacing gui.navigation_spacing
 
