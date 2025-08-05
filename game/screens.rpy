@@ -319,6 +319,8 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
+        textbutton _("credits") action ShowMenu("credits_screen")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -1144,8 +1146,33 @@ style help_label_text:
 
 
 ################################################################################
-## Additional screens
+## Additional screens (UHM THIS ONE IS MADE BY ME)
 ################################################################################
+
+screen credits_screen():
+    tag menu
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+    use game_menu(_("Credits"), scroll="viewport"):
+        style_prefix "credits"
+        # Build your screen here
+
+        vbox:
+
+            text "Development Team"
+            text "Developer: Mo"
+            
+            text "Special Thanks"
+            text "BRO PLEASE OWRK"
+
+
+style credits_label is gui_label
+style credits_label_text is gui_label_text
+style credits_text is gui_text
+
+style credits_label_text:
+    size gui.label_text_size
 
 
 ## Confirm screen ##############################################################
