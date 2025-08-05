@@ -55,9 +55,9 @@ define config.has_voice = True
 ## NOTE THIS DOES NOT WORK AT THE MOMENT - REMEMER TO ASK PLAY TESTERS IF THE MUSIC OR SFX IS 
 ## TOO LOUD
 
-default preferences.music_volume = 0.1
-default preferences.sfx_volume = 0.1
-default preferences.voice_volume = 0.1
+default preferences.music_volume = 0.3
+default preferences.sfx_volume = 0.3
+default preferences.voice_volume = 0.3
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.

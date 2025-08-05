@@ -1163,17 +1163,22 @@ screen credits_screen():
             
             # Left Column
             vbox:
+                xsize 0.5
                 text "The Team" color '#3854af'
                 text "Developer: Mo" size 35
                 text "Artist: Mo" size 35
-                text "Writer: Also Mo\n" size 35
-                text "ok this is just a text"
-
+                text "Writer: Also Mo" size 35
+                text "TLDR; This is a solo project!\n" size 35
+                text "Made with <3 by Mo AKA Selina Tung" size 12
+                text "Content used"
+                text "INSERT MUSIC USED HERE"
+                text "Music: All music used is accredited to Toby Fox" size 35
+                text "SFX: All sfx used is accredited to Kenney (KenNL on reddit)" size 35
             # Right Column  
             vbox:
                 text "Special Thanks" color '#3854af'
                 text "BRO PLEASE OWRK" size 35
-                text "Music and SFX: Toby Fox (all music) and Kenney (KenNL on reddit) (all sfx)" size 35
+                text "I caught a brick by Selina Tung is marked CC0 1.0"
 
 
 style credits_label is gui_label
