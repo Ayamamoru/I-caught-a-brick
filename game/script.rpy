@@ -282,7 +282,7 @@ label class_morning:
 label ignore_play_games:
     "You decide to settle in the school courtyard and play some games on your phone."
     "You play some games for a while, but you feel like you should probably go to class soon."
-    play music "32 - Run!.mp3" fadein 1.0 volume 0.5
+    play music "32 - Run!.mp3" fadein 1.0 
     show top_text "Run! - Undertale OST, by Toby Fox"
     "What luck... it starts POURING RAIN... ON YOUR PHONE."
     "You quickly put your phone away and run to the school building."
@@ -363,7 +363,7 @@ label cult_club:
     "You walk to the club room and knock on the door."
     "The door opens and you see a group of people sitting in a circle, chanting something."
     "You shrug and slip inside, closing the door behind you."
-    play music "28 - Premonition.mp3" fadein 1.0 volume 0.5
+    play music "28 - Premonition.mp3" fadein 1.0 
     show top_text "Premonition - Undertale OST, by Toby Fox"
     mc "Hi everyone."
     "The group stops chanting and looks at you. The club vice president Eriss greets you."
