@@ -1158,19 +1158,22 @@ screen credits_screen():
         style_prefix "credits"
         # Build your screen here
 
-        vbox:
-
-            text "The Team"
-            text "Developer: Mo"
-            text "Artist: Mo"
-            text "Writer: Also Mo"
-
-            text "Music and SFX: Toby Fox (all music) and Kenney (KenNL on reddit) (all sfx)"
-
-
+        hbox:
+            spacing 50
             
-            text "Special Thanks"
-            text "BRO PLEASE OWRK"
+            # Left Column
+            vbox:
+                text "The Team" color '#3854af'
+                text "Developer: Mo" size 35
+                text "Artist: Mo" size 35
+                text "Writer: Also Mo\n" size 35
+                text "ok this is just a text"
+
+            # Right Column  
+            vbox:
+                text "Special Thanks" color '#3854af'
+                text "BRO PLEASE OWRK" size 35
+                text "Music and SFX: Toby Fox (all music) and Kenney (KenNL on reddit) (all sfx)" size 35
 
 
 style credits_label is gui_label
