@@ -89,7 +89,7 @@ define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = pixellate
+define config.after_load_transition = fade
 
 
 ## Used when entering the main menu after the game has ended.
