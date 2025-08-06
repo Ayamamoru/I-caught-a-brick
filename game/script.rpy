@@ -12,6 +12,7 @@ define n = Character("Noona", color="#2938ff")
 define m = Character("Mo", color="#b8fdb8")
 define e = Character("Eriss", color="#ffb8b8")
 define k = Character("Rock", color="#ffb8b8")
+define kc = Character("Kaylee", color= "#03ccbb")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
@@ -355,6 +356,20 @@ menu option_5:
 
 label check_game_club:
     "You decide to go check the game club."
+    "The club president's cat is in the corner of the room"
+    "You see all nearly all the members setting up a board game in the center of the classroom"
+    "Brick is hanging out with the cat, it seems"
+
+menu option_8:
+    "Chat with Brick and the cat":
+        $ good_points += 1
+        $ neutral_points += 1
+        $ arcade_end = True
+        jump nice_chat
+    "Play a board game with everyone":
+        $ neutral_points += 1
+        $ good_points += 1
+        jump board_game
 
 
 label ignore_game_club_cafeteria:
@@ -385,7 +400,7 @@ menu option_7:
     "Check out the game club":
         $ good_points += 1
         jump check_game_club
-        
+
 label cult_club:
     "You decide to go to the ??? club."
     "You walk to the club room and knock on the door."
@@ -433,6 +448,8 @@ menu option_6:
 
 label weird_game_club:
     "You put aside your nerves and approach Brick"
+    play music "1.048 - Alphys.flac" fadein 3.0
+    show top_text "Alphys - Undertale OST, by Toby Fox"
     mc "Hey Brick, do you have a fish?"
     b "Uhm yeah, I do"
     b "why?"
@@ -472,6 +489,8 @@ label weird_game_club:
     b "Uhm, I never really thought of that"
     mc "But wouldn't that be cool???"
     b "Maybe?"
+    stop music fadeout 3.0
+    hide top_text
 
     "Your conversation is cut short by the bell for the afternoon block of classes"
 
