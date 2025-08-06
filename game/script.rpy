@@ -372,7 +372,20 @@ label ignore_game_club_cafeteria:
 
 label ignore_wander_around:
     "You decide to wander around the school for a bit."
+    "There isn't much going on. The school year has only just begun, so all the freshmen were calleed to the club fair"
+    "The hallways are much quieter since many of the non-freshmen have extracurriculars at lunch"
+    "You wander around and peek into a few classrooms, checking out club activities"
+    "There isn't much to see though, so after a long while you think it might be best to head to class early"
+    "You remember the game club is likely still open too"
 
+menu option_7:
+    "Head to class early":
+        $ neutral_points += 1
+        jump early_after_class
+    "Check out the game club":
+        $ good_points += 1
+        jump check_game_club
+        
 label cult_club:
     "You decide to go to the ??? club."
     "You walk to the club room and knock on the door."
@@ -411,9 +424,12 @@ menu option_6:
     "Ask Brick about his fish" if occult_end == True:
             $ bad_points += 1
             jump weird_game_club
-    "Make small talk and get to know him":
-            $ good_points += 1
+    "Make small talk and get to know him" if occult_end == False:
+            $ platonic_points += 1
             jump convo_chat
+    "Join the other club members and play a board game":
+            $ good_points += 1
+            $ occult_end = False
 
 label weird_game_club:
     "You put aside your nerves and approach Brick"
