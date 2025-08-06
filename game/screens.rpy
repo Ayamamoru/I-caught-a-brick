@@ -577,6 +577,8 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text "\n\n\n\n\n\n\n"
+            text "Also, here's a secret... the game title has no significance besides Mo thinking it was funny lol" size 20 color '#013668'
 
 
 style about_label is gui_label
