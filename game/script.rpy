@@ -122,6 +122,7 @@ label fish_talk:
     f "I will give you $500 if you get this guy out of the house and become his friend."
     f "You seem pretty broke."
     "ah... $500 is a lot of money, and you are pretty broke."
+    "Unfortunately you're also the type of person to be easily swayed by money..."
 
 
     menu option_2:
