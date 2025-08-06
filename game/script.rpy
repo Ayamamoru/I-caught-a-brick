@@ -358,6 +358,16 @@ label check_game_club:
 
 label ignore_game_club_cafeteria:
     "You decide to head to the cafeteria for lunch."
+    "Your friends all have lunch-time extracurriculars today, so you just sit down at a random table"
+    "You decide to develop your plan to become friends with Brick a little more"
+    "You're not too confident in your social decisions so it seems better to plan it out first"
+    "After about 25 minutes of contemplating, you manage to make a somewhat feasible plan"
+    "Your plan is to go find him and talk for the rest of the lunch break"
+    "On the way to the cafeteria, it seemed like the game club was open"
+    "You decide to test your luck and see if Brick is there."
+    "Just your luck! He's in the corner playing with the club president's cat"
+    "You're at a loss for small talk topics so you decide to start a conversation about his fish"
+    jump weird_game_club
 
 label ignore_wander_around:
     "You decide to wander around the school for a bit."
@@ -426,7 +436,7 @@ label weird_game_club:
     b "And it feels weird to rename it now so uhm"
     b "Yeah my fish's name is just Fish"
     mc "oh, well hey that's still cool"
-    "You feel like you should try to learn more about the actual fish, and not it's onomatology"
+    "You feel like you should try to talk more about the actual fish, and not it's onomatology"
     mc "Maybe it was just me but do you ever talk to your fish?"
     mc "I used to talk to my fishes"
     b "What?"
@@ -445,9 +455,15 @@ label weird_game_club:
     b "Uhm, I never really thought of that"
     mc "But wouldn't that be cool???"
     b "Maybe?"
+
     "Your conversation is cut short by the bell for the afternoon block of classes"
+
+    if occult_end == False:
+        "Unfortunatly, you can't contine your conversation because you don't have the same class as Brick"
     "You feel like you didn't gain much information, but any progress is progress."
-    "Unfortunatly, you can't continue your investigation because you don't have the same class as Brick"
+
+    if occult_end == True:
+        "Unfortunatly, you can't continue your investigation because you don't have the same class as Brick"
     "You head to class, still pondering the fish"
 
 
