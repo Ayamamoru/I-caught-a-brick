@@ -15,8 +15,9 @@ define k = Character("Rock", color="#ffb8b8")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
-define romance_points = 0
+define platonic_points = 0
 define occult_end = False
+define arcade_end = False
 transform halfsize():
     zoom 0.9
 image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
@@ -30,8 +31,9 @@ label start:
     $ bad_points = 0
     $ good_points = 0
     $ neutral_points = 0
-    $ romance_points = 0
+    $ platonic_points = 0
     $ occult_end = False
+    $ arcade_end = False
     image passive = "passive.png"
     image bg room = "BG PLACEHOLDER.jpg"
     image fish = "fish.png"
@@ -112,6 +114,7 @@ label fish_talk:
     f "He's too much of a coward to talk to people, so he just sits in his room all day and plays video games."
     f "The poor lad is so lonely he even talks to me, a fish."
     f "I'm not very keen on listening to him talk about his life though. I have my own life to live, you know?"
+    f "Plus, he's wasting his high school life, already a sophomore but nothing to show for it..."
     f "So I need you to do me a favor."
     mc "uhmmmm ok..."
     "You decide to humor the fish, even though you feel like you are losing your mind."
@@ -181,7 +184,8 @@ label task_details:
     hide fish
     "The fish gives you a piece of paper with a timetable on it."
     "You look at the timetable and see that the owner is Brick, your classmate"
-    "You remember that Brick seems to be a huge introvert and is in your art class and game club."
+    "You remember that Brick seems to be a huge introvert and is in your art club and game club."
+    "It also looks like you have the same history class."
     "Wait, how are you holding the paper if you are holding the fish?"
     stop music fadeout 3.0
     hide top_text
@@ -319,7 +323,7 @@ label ignore_game_club:
 
 
 label class_boring:
-    "As your teacher drones on and on about the history of art, you feel your eyelids getting heavier."
+    "Your teacher drones on and on about the history of... something. You weren't paying attention. You feel your eyelids getting heavier."
     "You try to pay attention, but the lecture is so boring that you can't help but doze off."
     t "Please pay attention, class."
     "Your head jerks up slightly as you realize that you were about to fall asleep."
@@ -395,15 +399,56 @@ label cult_club:
 menu option_6:
     "Ask Brick about his fish" if occult_end == True:
             $ bad_points += 1
-            jump fish_chat
+            jump weird_game_club
     "Make small talk and get to know him":
             $ good_points += 1
             jump convo_chat
 
-label fish_chat:
+label weird_game_club:
     "You put aside your nerves and approach Brick"
     mc "Hey Brick, do you have a fish?"
-
+    b "Uhm yeah, I do"
+    b "why?"
+    mc "oh I was just curious - I really like fish ya know"
+    mc "What type of fish is it?"
+    b "I don't actually know, I got it from the side of the road"
+    mc "huh?"
+    b "This guy was selling fish on the side of the road so my sister got me one"
+    b "I've had my fish for like 6 years"
+    mc "Oh wow. That's a long time."
+    mc "My childhood fish never lived over a month... poor souls..."
+    b "..."
+    mc "Anyways - What's your fish's name?"
+    b "Oh, I never gave it a name"
+    mc "huh?"
+    b "I always just called my fish 'Fish'"
+    b "I was waiting to think of a really good name for it but I never did"
+    b "And it feels weird to rename it now so uhm"
+    b "Yeah my fish's name is just Fish"
+    mc "oh, well hey that's still cool"
+    "You feel like you should try to learn more about the actual fish, and not it's onomatology"
+    mc "Maybe it was just me but do you ever talk to your fish?"
+    mc "I used to talk to my fishes"
+    b "What?"
+    b "Oh. How did you know? Yeah, I talk to my fish."
+    mc "isn't that kinda weird?"
+    "You accidently slip up and quickly change the topic, not wanting to accidently offend Brick"
+    mc "Oh, what do you say to it?"
+    b "Uhm....."
+    b "Just whatever?"
+    b "My sister went to university a few years ago so I don't really have anyone to talk to most of the time"
+    b "So I just say whatever comes to mind"
+    mc "That's nice"
+    mc "Do you think your fish understands you?"
+    b "Well no... I mean, it's a fish"
+    mc "But what if it could talk?"
+    b "Uhm, I never really thought of that"
+    mc "But wouldn't that be cool???"
+    b "Maybe?"
+    "Your conversation is cut short by the bell for the afternoon block of classes"
+    "You feel like you didn't gain much information, but any progress is progress."
+    "Unfortunatly, you can't continue your investigation because you don't have the same class as Brick"
+    "You head to class, still pondering the fish"
 
 
 label convo_chat:
