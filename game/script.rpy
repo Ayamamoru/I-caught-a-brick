@@ -19,6 +19,7 @@ define neutral_points = 0
 define platonic_points = 0
 define occult_end = False
 define arcade_end = False
+define rained_on = False
 transform halfsize():
     zoom 0.9
 image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=25)
@@ -35,6 +36,7 @@ label start:
     $ platonic_points = 0
     $ occult_end = False
     $ arcade_end = False
+    $ rained_on = False
     image passive = "passive.png"
     image bg room = "BG PLACEHOLDER.jpg"
     image fish = "fish.png"
@@ -311,6 +313,7 @@ label ignore_play_games:
     "You dry off in the washroom and look at yourself in the mirror."
     "You look like a wet rat, ew."
     "You sigh and head to class, hoping that nobody will notice the water dripping off your hair."
+    $ rained_on = True
     jump class_boring
 
 
@@ -598,7 +601,93 @@ label weird_game_club:
 label afternoon_class:
     "The rest of the classes of the day are equally as boring as the classes you had this morning"
     "You spend the rest of the afternoon staring out the window, bored out of your mind"
-    "I'll write more here later...."
-   
-    
+    "Both classes pass uneventfully, you and your classmates start packing up"
+    "Although you're tired, you remember that the art club is open after school today"
+
+menu option_9:
+    "Go to art club":
+        $ good_points += 1
+        jump art_club
+    "Head home":
+        $ neutral_points += 1
+        jump home_one
+
+
+label art_club:
+    "You decide to head to the art club meeting, unenthusiastically lugging your school bag along with you"
+    "The art club classroom is on the complete opposite side of the building so you take your time walking there"
+    "Other bustling students pass you by as you make your way through the crowd of students"
+    "You finally arrive at the art club classroom"
+    "It looks like the others have already gotten started working on their own micellaneous art projects"
+    "The club president greets you"
+    kc "Hey [povname], how are you?"
+    mc "I'm doing alright, classes have me drained though"
+    mc "Club plans today?"
+    kc "There's not much going on today, everyone's just working on their own projects"
+    mc "Gotcha."
+    "You go fetch your painting from the rack in the back of the classroom"
+    "Since it was an art classroom already, various art supplies are decked throughout the room"
+    kc "Almost done the painting?"
+    mc "Yeah, I think it should be done in 2 or 3 sessions"
+    mc "just the final touches left now"
+    "You make small talk as you situate yourself and your painting at a table, scurrying around to grab your palette and brushes"
+    "It looks like Brick has joined the club meeting today aswell, sculpting something out of clay"
+    "You notice another frequent club member at the table too, seemingly crocheting a plush cat"
+
+menu option_10:
+    "Talk with Brick and club member":
+        $ platonic_points += 1
+    "Focus on your painting":
+        $ neutral_points += 1
+    "Idly talk with Brick":
+        $ good_points += 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label home_one:
+    "You decide to head home for the day"
+    "You do have quite a bit of homework to do PLUS you're tired..."
+    if rained_on == True
+        "...and still damp from the earlier rain shower..."
+    "You grab your bag and squeeze through the hallways full of students"
+    "Luckily, you live in the nearby neighborhood so it's a quick walk down a couple of blocks"
+    "You get home and reluctantly do your homework."
+    "Your teachers must truly be monsters! You end up spending the next few hours on homework..."
+    "Once you're done, you sigh and open your PC"
+    "You're staring to get tired but you also want to play some games before bed..."
+
+menu option_11:
+    "Go to bed":
+        jump bedtime
+    "Sleep is for the weak":
+        jump doomscroll
+
     return
