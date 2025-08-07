@@ -675,7 +675,7 @@ menu option_10:
 label home_one:
     "You decide to head home for the day"
     "You do have quite a bit of homework to do PLUS you're tired..."
-    if rained_on == True
+    if rained_on == True:
         "...and still damp from the earlier rain shower..."
     "You grab your bag and squeeze through the hallways full of students"
     "Luckily, you live in the nearby neighborhood so it's a quick walk down a couple of blocks"
@@ -690,4 +690,6 @@ menu option_11:
     "Sleep is for the weak":
         jump doomscroll
 
+
+label doomscroll:
     return
