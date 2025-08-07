@@ -21,7 +21,7 @@ define occult_end = False
 define arcade_end = False
 transform halfsize():
     zoom 0.9
-image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=30)
+image top_text = ParameterizedText(xalign=0.0, yalign=0.0, color="#ffffff", size=25)
    
 label start:
     stop music fadeout 1.5
@@ -38,6 +38,7 @@ label start:
     image passive = "passive.png"
     image bg room = "BG PLACEHOLDER.jpg"
     image fish = "fish.png"
+    image cat = "cat.jpg"
 
     scene bg room
 
@@ -216,6 +217,7 @@ label morning_game_club:
     "The club president brought some board games and is playing with a few other members."
     "OH... would you look at that!"
     mc "KITTTYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+    show cat at right,with moveinright
     "You see the club president's cat sitting on a desk, pet carrier on the floor."
 
     menu option_4:
@@ -232,7 +234,7 @@ label pet_cat:
     "The cat is very fluffy and purrs when you pet it."
     "You no longer want to go to class at all and just want to pet the car"
     "You idly chat with the club members and pet the cat for a while."
-    b "Hey kitty, here's your water."
+    b "Hey Noona, here's your water."
     show passive at left,with moveinleft
     "You turn around and see Brick, he has a collapsible water bowl in his hands."
     "Looks like he went to the water fountain to fill it up."
@@ -250,6 +252,7 @@ label pet_cat:
     b "Oh. I have a fish so I can't get a cat."
     mc "Oh, maybe one day we will both get cats."
     b "Yeah."
+    hide cat with moveoutright
     hide passive with moveoutleft
     "You both reach a mutual understanding and continue to pet the cat in a more comfortable silence."
     "You feel like you made a lot of progress and both of you head to class together in silence."
@@ -259,6 +262,7 @@ label pet_cat:
 
 label ignore_cat:
     "You decide not to pet the cat."
+    hide cat with moveoutright
     "How can you resist the urge to pet the cat?"
     "You must be a monster."
     "You decide to join the club members and play some board games."
@@ -293,7 +297,8 @@ label ignore_play_games:
     "What luck... it starts POURING RAIN... ON YOUR PHONE."
     "You quickly put your phone away and run to the school building."
     "THE DOORS ARE LOCKED."
-    mc "HEYYYYYY OPEN THE DOOR"
+    "You think about yelling at the people inside to open the door... but you're too self concious"
+    mc "dammit..."
     "You knock furiously on the door, but it looks like nobody hears you"
     "You see someone passing by to reach the water fountain and knock harder on the door."
     "You catch their attention and they open the door for you."
@@ -387,8 +392,8 @@ label board_game:
 
 label nice_chat:
     "You head over and pet the cat"
-    play music "1.048 - Alphys.flac" fadein 3.0
-    show top_text "Alphys - Undertale OST, by Toby Fox"
+    play music "55 - Can You Really Call This A Hotel, I Didn't Receive A Mint On My Pillow Or Anything.mp3" fadein 3.0
+    show top_text "Can you really call this a hotel, I didn't receive a mint on my pillow or anything - Undertale OST, by Toby Fox"
     "It meows lazily"
     mc "Back with the kitty huh"
     b "yeah"
