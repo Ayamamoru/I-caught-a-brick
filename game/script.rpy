@@ -387,6 +387,8 @@ label board_game:
 
 label nice_chat:
     "You head over and pet the cat"
+    play music "1.048 - Alphys.flac" fadein 3.0
+    show top_text "Alphys - Undertale OST, by Toby Fox"
     "It meows lazily"
     mc "Back with the kitty huh"
     b "yeah"
@@ -448,6 +450,8 @@ label nice_chat:
     "The bell cuts your conversation short"
     "You say bye to the club members and the club cat before heading to your afternoon block of classes"
     "You feel like you made a lot of progress so far in becoming friends with Brick"
+    stop music fadeout 3.0
+    hide top_text
     jump afternoon_class    
 
 
