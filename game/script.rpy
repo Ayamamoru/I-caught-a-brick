@@ -361,7 +361,7 @@ label check_game_club:
     "Brick is hanging out with the cat, it seems"
 
 menu option_8:
-    "Chat with Brick and the cat":
+    "Chat with Brick and the cat" if occult_end == False:
         $ good_points += 1
         $ neutral_points += 1
         $ arcade_end = True
@@ -370,6 +370,85 @@ menu option_8:
         $ neutral_points += 1
         $ good_points += 1
         jump board_game
+    "Ask Brick about his fish" if occult_end == True:
+            $ bad_points += 1
+            jump weird_game_club
+
+
+label board_game:
+    "You decide to play the board game with everyone else"
+    "After the first round, the club pres (nicely) forces Brick to play since one of the other members had to leave"
+    "I still need to finish writing this butr uhm , you play games until the bell rings"
+    "You head to your afternoon block of classes"
+    jump afternoon_class
+
+
+
+
+label nice_chat:
+    "You head over and pet the cat"
+    "It meows lazily"
+    mc "Back with the kitty huh"
+    b "yeah"
+    b "club pres is lucky to have such a nice cat"
+    mc "true"
+    mc "(this was just an excuse for mo to put a cat in-game)"
+    mc "So uhm"
+    mc "I just wanted to ask"
+    mc "why were you named Brick?"
+    b "when I was born, someone tossed a brick through the hospital window and the nurse almost dropped me"
+    mc "..."
+    b "your name isn't any better"
+    mc "... fair enough"
+    mc "that's some pretty cool name lore"
+    mc "wait you mean to tell me your parents were so uninspired that they named you after the brick that was tossed through the hospital window?"
+    b "Oh yeah, they hadn't learned a lot of english back then"
+    b "so when the nurse said 'OMG A BRICK!?' my mom thought it sounded nice and uhm..."
+    b "so my name is brick"
+    mc "fire lore"
+    mc "anyways"
+    mc "how come you always seem to be in the game club"
+    mc "besides just being part of the club... there's no meetings or anything like that we just play games here"
+    mc "I think you might be the only person who always shows up... that I know of at least. I think club pres mentioned it"
+    b "I think the cafeteria is too loud so I don't like going there"
+    b "I would go outside but I have allergies this time of year"
+    b "plus, none of the other clubs have really started yet"
+    b "so I might as well hang out here"
+    mc "fair point"
+    mc "I guess the cat is an added bonus"
+    b "yeah i dunno how club pres manages to sneak it in all the time"
+    mc "truly a gift"
+    b "so uhm you have any hobbies or smth"
+    mc "I like playing games"
+    mc "and uhm, not studying"
+    mc "and wasting time"
+    mc "acting like I'm working when I'm actually not (mo yu)"
+    b "oh"
+    b "wow, that's a great work ethic you got there"
+    mc "i'm trying my best"
+    b "sure sounds like it.... what games do you play"
+    mc "lotsa games"
+    mc "but only free ones cause I'm extremely broke"
+    b "oh that's nice"
+    b "do you have a favorite?"
+    mc "yeah theres this game where you like uhm do stuff... I don't know how to explain it. It's a game about a magic fish..."
+    b "Oh well... sounds fun probably"
+    mc "it is fun trust"
+    b "do you think you're good at games?"
+    mc "nah I suck"
+    mc "but if that was a challenge I will definitly win"
+    b "noted then"
+    b "You suck at games but you win against other people..."
+    mc "my skills are horrible until I have the spirit of retribution in me"
+    b "do you think you could win a game against club pres?"
+    "The club president is notorious for being addicted to gaming..."
+    mc "my skills are not that good"
+    mc "maybe one day though"
+    b "we'll see then"
+    "The bell cuts your conversation short"
+    "You say bye to the club members and the club cat before heading to your afternoon block of classes"
+    "You feel like you made a lot of progress so far in becoming friends with Brick"
+    jump afternoon_class    
 
 
 label ignore_game_club_cafeteria:
@@ -400,6 +479,19 @@ menu option_7:
     "Check out the game club":
         $ good_points += 1
         jump check_game_club
+
+
+label early_after_class:
+    "You decide to head to class early"
+    "There isn't anyone in the classroom yet"
+    "It looks like the teacher is still on lunch break too"
+    "You pass the time by playing games on your phone"
+    "After a long while, the bell rings and you put your phone away"
+    jump afternoon_class
+
+
+
+
 
 label cult_club:
     "You decide to go to the ??? club."
@@ -434,17 +526,7 @@ label cult_club:
 
     "There's some time before the next block of classes, so you decide to head to the game club to see if Brick is there."
     "You find Brick sitting in the corner of the room, playing with the club president's cat."
-
-menu option_6:
-    "Ask Brick about his fish" if occult_end == True:
-            $ bad_points += 1
-            jump weird_game_club
-    "Make small talk and get to know him" if occult_end == False:
-            $ platonic_points += 1
-            jump convo_chat
-    "Join the other club members and play a board game":
-            $ good_points += 1
-            $ occult_end = False
+    jump option_8
 
 label weird_game_club:
     "You put aside your nerves and approach Brick"
@@ -493,6 +575,7 @@ label weird_game_club:
     hide top_text
 
     "Your conversation is cut short by the bell for the afternoon block of classes"
+    
 
     if occult_end == False:
         "Unfortunatly, you can't contine your conversation because you don't have the same class as Brick"
@@ -501,14 +584,12 @@ label weird_game_club:
     if occult_end == True:
         "Unfortunatly, you can't continue your investigation because you don't have the same class as Brick"
     "You head to class, still pondering the fish"
+    jump afternoon_class
 
-
-label convo_chat:
-
-
-    show passive at right
-
-    b "I am Brick, the best friend of Fish."
-    b "also you frickin suck at this game, [povname]."
+label afternoon_class:
+    "The rest of the classes of the day are equally as boring as the classes you had this morning"
+    "You spend the rest of the afternoon staring out the window, bored out of your mind"
+    "I'll write more here later...."
+   
     
     return

@@ -1173,8 +1173,10 @@ screen credits_screen():
                 text "TLDR; This is a solo project!\n" size 35
                 
                 text "Content used" color '#3854af'
-                text "Music: All music used is accredited to Toby Fox" size 25
+                text "Music: Majority of music used is accredited to Toby Fox" size 25
                 text "And subsequently Materia Music Publishing\n" size 20
+                text "Ending music: All tracks used in ending scenes is accredited to Good Kid!!" size 25
+                text "Favorite band right there ^^\n" size 20 color '#224bd4d2'
                 text "SFX: All sfx used are accredited to Kenney (KenNL on reddit)\n" size 25
                 text "Fonts used are HVD Poster, Overmuch and VCR OSD MONO\n" size 20 color '#224bd4d2'
 
