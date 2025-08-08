@@ -13,6 +13,7 @@ define m = Character("Mo", color="#b8fdb8")
 define e = Character("Eriss", color="#ffb8b8")
 define k = Character("Rock", color="#ffb8b8")
 define kc = Character("Kaylee", color= "#03ccbb")
+define nb = Character("???", colour "#009be2ff")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
@@ -635,7 +636,7 @@ label art_club:
     "You notice another frequent club member at the table too, seemingly crocheting a plush cat"
 
 menu option_10:
-    "Talk with Brick and club member" if occult_end == False:
+    "Talk with Brick and club member" if arcade_end == True:
         $ platonic_points += 1
         jump artchat
     "Focus on your painting":
@@ -645,9 +646,89 @@ menu option_10:
         $ good_points += 1
         jump brickart
 
+label artchat:
+    mc "hey everyone"
+    mc "what are we working on"
+    "You look at the club member who's crocheting and try to remember their name"
+    mc "oh uh I like your crochet cat"
+    nb "Oh, your painting is pretty fire too"
+    b "does no one appreciate my sculpture"
+    mc "No it looks great"
+    nb "it looks like a lump of clay alright"
+    b "..."
+    b "ok fair enough"
+    "Looks like you managed to get the table talking, it seemed a little awkward before..."
+    mc "what are your sculpting?"
+    b "I'm just making a jar"
+    mc "Oh, cool"
+    nb "for what"
+    b "fish food"
+    #DEVILS NUMBER RAHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+    mc "...That's a pretty big jar for fish food"
+    b "Yeah, my fish eats so much though"
+    nc "did you think of like, not feeding it that much"
+    b ".................."
+    b "Anyways"
+    mc "So uhm what's your name - I already know brick a little bit but uh I don't think we've met before"
+    nb "Oh, I'm Rock"
+    b "what"
+    mc "..."
+    k "Yeah, great name right"
+    mc "so why's your name rock?"
+    k "When I was born, someone threw a rock through-"
+    b "No way"
+    k "Yeah actually I was just making fun of you lol"
+    k "my name is Eriss"
+    e "but uh [povname] we've been in the same club for over a year did you just... never learn anyone's names"
+    mc "NO i swear i just forgot"
+    mc "And I didn't get the chance to talk to you last year either"
+    e "ok fair enough"
+    b "So you're NOT named Rock"
+    e "No i was making fun of you"
+    e "lol"
+    b "oh"
+    b "that's nice"
+    e "are you offended"
+    b "No"
+    b "I will admit it was kinda funny"
+    mc "am i witnessing bullying"
+    b "yes"
+    e "no"
+    mc "...."
+    mc "ok well uhm eriss do you have any hobbies or anything"
+    e "crochet, games, unemployment, doomscrolling"
+    mc "pretty solid"
+    b "doomscrolling..."
+    e "I think everyone doomscrolls"
+    mc "sounds about right"
+    b "what games do you play?"
+    e "There's this game about a magic fish-"
+    mc "HEY WAIT I PLAYED THAT TOO"
+    e "It's the best game ever"
+    mc "It is pretty good"
+    b "Guys what game is it why am I the only one that hasn't played it"
+    mc "I forgot the name"
+    e "yeah me too. It was like a magic fish trying to scam you though."
+    b "..... that sounds fun"
+    mc "it's so awesome"
+    b "What about like arcade games?"
+    mc "I haven't gone to an arcade before"
+    e "I'm the master of arcade games"
+    b "What games?"
+    e "All of em! I used to live beside a game shop and they had arcade machines so I would go all the time"
+    e "Nobody can beat me"
+    b "Oh. I can only really play pac-man and tetris"
+    b "I'm not very good at the other games"
+    mc "Am I missing out"
+    e "yes. absolutly"
+    b "Not really"
+    mc "..."
+    mc "Ok I might have to stick to playing Steam games then"
+    "You guys all end up geeking out over cool video games and you feel like you made a lot of progress in becoming friends"
+    "Eriss also seems pretty nice, so you consider befriending her too"
 
 
-
+    
 
 
 
@@ -705,5 +786,5 @@ label doomscroll:
     "A little while.... you lose track of time and finally get ready for bed at 2AM"
     "Only to settle in bed and start watching short videos on your phone"
     "You really are past the point of redemption (sigh)"
-    "You finally fall asleep from exhaustion after a few more hours"
+    "You finally fall asleep from exhaustion after a few more hours of doomscrolling"
     return

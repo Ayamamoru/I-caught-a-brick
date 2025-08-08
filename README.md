@@ -1,7 +1,7 @@
 Presenting... I CAUGHT A BRICK!!
 A visual novel made using the Ren'py game engine. 
 In which you go on an adventure with an introvert and his fish (or a fish and his introvert caretaker servant)
-Try your best to convince said introvert to go touch grass and socialize for a chance to scam the fish out of $500!!
+Try your best to convince said introvert to go touch grass and socialize for a chance to scam the fish out of A LOTTA MONEYYY!!
 
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
