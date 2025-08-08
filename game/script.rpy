@@ -175,7 +175,7 @@ label no_500_fish:
     f "huh, you drive a hard bargain, [povname]."
     f "I wonder who taught you to haggle like that."
     mc "what?"
-    f "Argh, fine, you will. I will give you $800 if you complete the task."
+    f "Argh, fine, you win. I will give you $800 if you complete the task."
     f "and a $100 down payment."
     "You feel like that's a lot of money, and you are pretty broke."
     "you thought it was a scam but it seems like the fish is serious about this."
@@ -185,7 +185,7 @@ label no_500_fish:
 label task_details:
     f "the task is simple. I need you to get my owner out of the house and become his friend."
     f "I will give you his time table so go become his school friend."
-    f "goodbye, twerp. See you in a week."
+    f "goodbye, twerp. See you in 3 days."
     hide fish
     "The fish gives you a piece of paper with a timetable on it."
     "You look at the timetable and see that the owner is Brick, your classmate"
@@ -635,12 +635,15 @@ label art_club:
     "You notice another frequent club member at the table too, seemingly crocheting a plush cat"
 
 menu option_10:
-    "Talk with Brick and club member":
+    "Talk with Brick and club member" if occult_end == False:
         $ platonic_points += 1
+        jump artchat
     "Focus on your painting":
         $ neutral_points += 1
+        jump painting
     "Idly talk with Brick":
         $ good_points += 1
+        jump brickart
 
 
 
