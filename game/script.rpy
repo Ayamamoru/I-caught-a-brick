@@ -13,7 +13,7 @@ define m = Character("Mo", color="#b8fdb8")
 define e = Character("Eriss", color="#ffb8b8")
 define k = Character("Rock", color="#ffb8b8")
 define kc = Character("Kaylee", color= "#03ccbb")
-define nb = Character("???", colour "#009be2ff")
+define nb = Character("???", color="#009be2ff")
 define bad_points = 0
 define good_points = 0
 define neutral_points = 0
@@ -666,7 +666,7 @@ label artchat:
     #DEVILS NUMBER RAHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
     mc "...That's a pretty big jar for fish food"
     b "Yeah, my fish eats so much though"
-    nc "did you think of like, not feeding it that much"
+    nb "did you think of like, not feeding it that much"
     b ".................."
     b "Anyways"
     mc "So uhm what's your name - I already know brick a little bit but uh I don't think we've met before"
@@ -728,7 +728,7 @@ label artchat:
     "Eriss also seems pretty nice, so you consider befriending her too"
 
 
-    
+
 
 
 
