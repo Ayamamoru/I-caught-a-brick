@@ -690,6 +690,17 @@ menu option_11:
     "Sleep is for the weak":
         jump doomscroll
 
+label bedtime:
+    "You decide to retire for the night"
+    "You're already tired, so you just leave some music playing on your PC while you prepare yourself for bed"
+    "Finally, you turn off the PC and lights and..."
+    "promptly pass out on the bed"
+    "You must really like sleeping"
 
 label doomscroll:
+    "You... refuse to go to sleep, opting instead to play games for a little while"
+    "A little while.... you lose track of time and finally get ready for bed at 2AM"
+    "Only to settle in bed and start watching short videos on your phone"
+    "You really are past the point of redemption (sigh)"
+    "You finally fall asleep from exhaustion after a few more hours"
     return
