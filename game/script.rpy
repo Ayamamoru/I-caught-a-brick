@@ -726,14 +726,26 @@ label artchat:
     mc "Ok I might have to stick to playing Steam games then"
     "You guys all end up geeking out over cool video games and you feel like you made a lot of progress in becoming friends"
     "Eriss also seems pretty nice, so you consider befriending her too"
+    "The club meeting ends after about 3 hours, so you clean your space and put your painting back on the rack before saying goodbye to everyone and leaving"
+    jump walk_home
 
 
+label painting:
+    "You decide to focus on your painting for today"
+    "You DO have to finish it in time for the artshow in a month after all"
+    "You need the most productive time you can get"  
+    "The other two people at your table also seem to be quiet focused on their projects"
+    "You lock in for the next three hours and it goes by unbelieveably quickly"
+    "You gotten a lot done, and you sigh with relief"
+    "You don't have too much class time to work on your display pieces, so you want to get things done when you can outside of class"
+    "The club meeting comes to an end, so you clean your space and put the painting away on the drying rack"
+    jump home_one
 
 
-
-
-
-
+label brickart:
+    "You decide to make some conversation with Brick"
+    "INSERT CONVO HERE"
+    jump walk_home
 
 
 
